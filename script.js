@@ -24,7 +24,7 @@ async function showWeather() {
     document.querySelector(".weather").classList.remove("hidden");
     document
       .querySelector(".weatherImg")
-      .setAttribute("src", `images/${response.weather[0].main}.png`);
+      .setAttribute("src", `images/${response.weather[0].main.toLowerCase()}.png`);
     document.querySelector(".temp").textContent =
       Math.round(response.main.temp) + "ºC";
     document.querySelector(".city").textContent = response.name;
